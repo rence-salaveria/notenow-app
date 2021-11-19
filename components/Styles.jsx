@@ -74,6 +74,9 @@ export const Layout = StyleSheet.create({
     buttonSize: {
         flexDirection: 'column',
         justifyContent: 'center',
-        width: '40%'
+        width: '50%'
+    },
+    taskList: {
+
     }
 })
