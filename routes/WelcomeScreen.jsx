@@ -7,7 +7,6 @@ import {
 } from 'react-native';
 import { Styles, Layout } from "../components/Styles";
 import CustomButton from "../components/CustomButton";
-import PressActions from "../components/PressActions";
 
 export default function WelcomeScreen({navigation}) {
     return (
