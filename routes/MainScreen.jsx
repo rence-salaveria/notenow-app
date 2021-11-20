@@ -9,7 +9,7 @@ import {
     ScrollView,
     SafeAreaView, Platform
 } from 'react-native';
-import { Styles, Layout, MainStyle } from '../components/Styles';
+import { Styles, MainStyle } from '../components/Styles';
 import { Task } from "../components/Task";
 
 
