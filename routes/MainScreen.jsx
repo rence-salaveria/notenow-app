@@ -28,6 +28,7 @@ export default function MainScreen() {
         itemsCopy.splice(index, 1);
         setTaskItems(itemsCopy)
     }
+
     return (
         <SafeAreaView style={Styles.container}>
             {/* Reference at: https://www.youtube.com/watch?v=0kL6nhutjQ8 */}
@@ -46,7 +47,7 @@ export default function MainScreen() {
                         {
                             taskItems.map((item, index) => {
                                 return (
-                                    <TouchableOpacity key={index}  onPress={() => completeTask(index)}>
+                                    <TouchableOpacity key={index} onPress={() => completeTask(index)}>
                                         <Task text={item} />
                                     </TouchableOpacity>
                                 )
