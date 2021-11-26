@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
     KeyboardAvoidingView,
     Text,
@@ -7,7 +7,8 @@ import {
     TouchableOpacity,
     Keyboard,
     ScrollView,
-    SafeAreaView, Platform
+    SafeAreaView,
+    Platform
 } from 'react-native';
 import { Styles, MainStyle } from '../components/Styles';
 import { Task } from "../components/Task";
@@ -26,12 +27,11 @@ export default function MainScreen() {
     const completeTask = (index) => {
         let itemsCopy = [...taskItems];
         itemsCopy.splice(index, 1);
-        setTaskItems(itemsCopy)
+        setTaskItems(itemsCopy);
     }
 
     return (
         <SafeAreaView style={Styles.container}>
-            {/* Reference at: https://www.youtube.com/watch?v=0kL6nhutjQ8 */}
             {/* Added this scroll view to enable scrolling when list gets longer than the page */}
             <ScrollView
                 contentContainerStyle={{
@@ -39,15 +39,18 @@ export default function MainScreen() {
                 }}
                 keyboardShouldPersistTaps='handled'
             >
-
                 {/* Today's Tasks */}
                 <View style={MainStyle.tasksWrapper}>
                     <Text style={Styles.heading}>Today's tasks :</Text>
                     <View style={MainStyle.items}>
                         {
+                            /* Map items from the taskItems and show them as tasks */
                             taskItems.map((item, index) => {
                                 return (
-                                    <TouchableOpacity key={index} onPress={() => completeTask(index)}>
+                                    <TouchableOpacity
+                                        key={index}
+                                        onPress={() => completeTask(index)}
+                                    >
                                         <Task text={item} />
                                     </TouchableOpacity>
                                 )
@@ -65,7 +68,11 @@ export default function MainScreen() {
                 style={MainStyle.writeTaskWrapper}
                 keyboardVerticalOffset={null}
             >
-                <TextInput style={[MainStyle.input, Styles.karla]} placeholder={'Write a task'} value={task} onChangeText={text => setTask(text)} />
+                <TextInput
+                    style={[MainStyle.input, Styles.karla]}
+                    placeholder={'Write a task'} value={task}
+                    onChangeText={text => setTask(text)}
+                />
                 <TouchableOpacity onPress={() => handleAddTask()}>
                     <View style={MainStyle.addWrapper}>
                         <Text style={[MainStyle.addText, Styles.increaseSize]}>+</Text>
