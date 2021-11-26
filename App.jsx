@@ -24,7 +24,7 @@ export default function App() {
         return null;
     }
 
-    const Stack = createNativeStackNavigator()
+    const Stack = createNativeStackNavigator();
 
     return (
         <NavigationContainer>
