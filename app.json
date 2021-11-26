@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "hainco-application",
-    "slug": "hainco-application",
+    "name": "notenow",
+    "slug": "notenow",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,6 +20,8 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.codegrammeristz.notenow",
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
