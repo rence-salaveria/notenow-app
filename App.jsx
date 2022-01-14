@@ -1,8 +1,8 @@
 import React from 'react';
 
 /* Screens */
-import WelcomeScreen from './routes/WelcomeScreen';
-import MainScreen from './routes/MainScreen';
+import WelcomeScreen from './screens/WelcomeScreen';
+import MainScreen from './screens/MainScreen';
 
 /* Plugins */
 import { NavigationContainer } from '@react-navigation/native';
